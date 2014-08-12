@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SALViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA2-P6-XG2">
+                                <rect key="frame" x="232" y="289" width="304" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="YCo-tD-4vI"/>
+                                </constraints>
+                                <state key="normal" title="Show quick tutorial">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showQuickTutorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r2V-YA-zun"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkl-nI-wpc">
+                                <rect key="frame" x="173" y="120" width="422" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="422" id="UaB-4H-plt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bW3-XG-Voq">
+                                <rect key="frame" x="173" y="182" width="422" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Unique key" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSi-WH-CL2">
+                                <rect key="frame" x="173" y="239" width="422" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLZ-GO-fNK">
+                                <rect key="frame" x="276" y="340" width="216" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show hard-coded quick tutorial">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showHardCodedTutorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJi-r3-mfI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aLZ-GO-fNK" firstAttribute="top" secondItem="wA2-P6-XG2" secondAttribute="bottom" constant="21" id="BlC-ej-zve"/>
+                            <constraint firstItem="wSi-WH-CL2" firstAttribute="leading" secondItem="bW3-XG-Voq" secondAttribute="leading" id="DMo-7s-fYW"/>
+                            <constraint firstItem="wSi-WH-CL2" firstAttribute="top" secondItem="bW3-XG-Voq" secondAttribute="bottom" constant="27" id="JDq-Wp-dkL"/>
+                            <constraint firstItem="xkl-nI-wpc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Ls2-bZ-oKJ"/>
+                            <constraint firstItem="bW3-XG-Voq" firstAttribute="top" secondItem="xkl-nI-wpc" secondAttribute="bottom" constant="32" id="MzS-dP-fpk"/>
+                            <constraint firstItem="bW3-XG-Voq" firstAttribute="trailing" secondItem="xkl-nI-wpc" secondAttribute="trailing" id="SSn-2e-tAX"/>
+                            <constraint firstItem="wA2-P6-XG2" firstAttribute="centerX" secondItem="aLZ-GO-fNK" secondAttribute="centerX" id="aSe-ww-oBd"/>
+                            <constraint firstItem="bW3-XG-Voq" firstAttribute="leading" secondItem="xkl-nI-wpc" secondAttribute="leading" id="dSW-Ph-haf"/>
+                            <constraint firstItem="wA2-P6-XG2" firstAttribute="top" secondItem="wSi-WH-CL2" secondAttribute="bottom" constant="20" id="fuI-qf-XJu"/>
+                            <constraint firstItem="aLZ-GO-fNK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oRu-Pf-qxz"/>
+                            <constraint firstItem="bW3-XG-Voq" firstAttribute="trailing" secondItem="wSi-WH-CL2" secondAttribute="trailing" id="v5A-Hl-524"/>
+                            <constraint firstItem="wA2-P6-XG2" firstAttribute="centerX" secondItem="wSi-WH-CL2" secondAttribute="centerX" id="x7M-0A-gtw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="bW3-XG-Voq" id="G1P-tq-sJ3"/>
+                        <outlet property="titleTextField" destination="xkl-nI-wpc" id="w7Z-WV-lhl"/>
+                        <outlet property="uniqueKeyTextField" destination="wSi-WH-CL2" id="jjP-pi-DvY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
