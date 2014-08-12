@@ -61,6 +61,10 @@
     formSheetController.shadowRadius = 3.0;
     formSheetController.shadowOpacity = 0.25;
     
+    UISwipeGestureRecognizer *swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:quickTutorialViewController action:@selector(dismiss)];
+    swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft|UISwipeGestureRecognizerDirectionRight;
+    [formSheetController.view addGestureRecognizer:swipeGestureRecognizer];
+    
     return formSheetController;
 }
 
@@ -112,6 +116,11 @@
     NSAssert([formSheetController isKindOfClass:[MZFormSheetController class]], @"In order to show a SALQuickTutorialViewController, you must provide a MZFormSheetController object");
     
     [formSheetController presentAnimated:YES completionHandler:nil];
+}
+
+- (void)dismiss
+{
+    [self.formSheetController dismissAnimated:YES completionHandler:nil];
 }
 
 @end
