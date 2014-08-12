@@ -99,6 +99,9 @@
     self.titleLabel.text = self.title;
     self.messageLabel.text = self.message;
     self.imageView.image = self.image;
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 }
 
 #pragma mark - presenting the tutorial
